@@ -1,0 +1,36 @@
+.card-columns .card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .card-columns .card:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-columns .card:hover::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-columns .card:hover::before,
+  .card-columns .card:hover::after {
+    opacity: 1;
+  }
+  
